@@ -1,0 +1,1 @@
+Folder dist with build files must be inside this server folder.
