@@ -17,6 +17,7 @@ func main() {
 	http.HandleFunc("/*", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "index.html")
 	})
-	log.Println("Serving " + distPath)
-	log.Fatal(http.ListenAndServe(":9999", nil))
+	port := "9999"
+	log.Printf("Serving %s on http://localhost:%s", distPath, port)
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
