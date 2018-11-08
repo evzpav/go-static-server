@@ -18,5 +18,5 @@ func main() {
 		http.ServeFile(w, r, "index.html")
 	})
 	log.Println("Serving " + distPath)
-	log.Fatal(http.ListenAndServe(":80", nil))
+	log.Fatal(http.ListenAndServe(":9999", nil))
 }
