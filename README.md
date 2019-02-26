@@ -1,22 +1,19 @@
-Folder dist with build files must be inside this server folder.
+# go-static-server
 
-Generate build
-GOOS=linux GOARCH=amd64 go build 
+## Go server for static files.
 
-scp -i ~/.ssh/pv-alert-03-09-18.pem ./go-frontend-server ubuntu@ec2-18-205-247-206.compute-1.amazonaws.com:/home/ubuntu/market/
+```bash
+go build 
 
-scp ./go-frontend-server devel@172.16.17.118:/home/devel/market/
+#   -path string
+#         folder path (default "/home/ubuntu/go/src/github.com/evzpav/go-static-server/dist")
+#   -port string
+#         port (default "9999")
+#   -route string
+#         url route (default "/")
+
+./go-static-server -port=8888 -route=/app -path=/home/ubuntu/go/src/github.com/evzpav/go-static-server/dist
+
+
 
 ```
- [Unit]
-  Description=Go Server
-
-  [Service]
-  ExecStart=/home/ubuntu/market/go-frontend-server
-  User=root
-  Group=root
-  Restart=always
-
-  [Install]
-  WantedBy=multi-user.target
-  ```
