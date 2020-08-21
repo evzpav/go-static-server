@@ -1,19 +1,13 @@
-# go-static-server
+# Go Static Server
 
-## Go server for static files.
+Go server for SPAs(Single Page Applications) and static files with zero dependencies.
 
+In the main.go define the variable `staticFolderPath` which is the folder of the built files (static files).  
+In this example, the folder is `frontend/dist`.
+It expects that there is a `index.html` file inside the folder.
+
+Run the server:
 ```bash
-go build 
-
-#   -path string
-#         folder path (default "/home/ubuntu/go/src/github.com/evzpav/go-static-server/dist")
-#   -port string
-#         port (default "9999")
-#   -route string
-#         url route (default "/")
-
-./go-static-server -port=8888 -route=/app -path=/home/ubuntu/go/src/github.com/evzpav/go-static-server/dist
-
-
-
+go run main.go
 ```
+Project will be running on [http:/localhost:9999](http:/localhost:9999)
