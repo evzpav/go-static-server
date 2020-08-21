@@ -10,4 +10,4 @@ Run the server:
 ```bash
 go run main.go
 ```
-Project will be running on [http:/localhost:9999](http:/localhost:9999)
+Project will be running on [http://localhost:9999](http://localhost:9999)
